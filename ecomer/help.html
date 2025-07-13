@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - 3nity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ffc107;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+        
+        .help-header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .help-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--accent-color);
+            color: black;
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--primary-color);
+            text-align: left;
+        }
+        
+        .contact-card {
+            border-left: 4px solid var(--accent-color);
+            transition: all 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(255, 193, 7, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,0.125);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="org">3</span>nity</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link " href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-warning" href="/help.html">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer" id="conatcts-btn">Contacts</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Help Center Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 mb-4">
+                <div class="help-section sticky-top" style="top: 20px;">
+                    <h4 class="mb-4">Help Topics</h4>
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#navigation">Site Navigation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shopping">Shopping Guide</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#payments">Payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shipping">Shipping</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#returns">Returns & Exchanges</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <!-- Site Navigation Section -->
+                <div class="help-section" id="navigation">
+                    <h2 class="mb-4"><i class="fas fa-map-signs me-2"></i> Site Navigation Guide</h2>
+                    
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0">
+                                <div class="card-body">
+                                    <h5><i class="fas fa-home text-warning me-2"></i> Homepage</h5>
+                                    <p>Our homepage features:</p>
+                                    <ul>
+                                        <li>Featured collections</li>
+                                        <li>Seasonal promotions</li>
+                                        <li>Quick category access</li>
+                                    </ul>
+                                    <a href="index.html" class="btn btn-outline-dark">Visit Homepage</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0">
+                                <div class="card-body">
+                                    <h5><i class="fas fa-shopping-bag text-warning me-2"></i> Category Pages</h5>
+                                    <p>Browse our collections:</p>
+                                    <ul>
+                                        <li>Tops - Shirts, Sweaters, etc.</li>
+                                        <li>Bottoms - Pants, Shorts, etc.</li>
+                                        <li>Accessories - Jewelry, Bags, etc.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mt-5 mb-3">Navigation Features</h4>
+                    <div class="accordion" id="navAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#navSearch">
+                                    <i class="fas fa-search me-2"></i> Search Functionality
+                                </button>
+                            </h2>
+                            <div id="navSearch" class="accordion-collapse collapse show" data-bs-parent="#navAccordion">
+                                <div class="accordion-body">
+                                    <p>Use the search icon <i class="fas fa-search"></i> in the top navigation to find specific products. You can search by:</p>
+                                    <ul>
+                                        <li>Product name (e.g., "Summer Dress")</li>
+                                        <li>Category (e.g., "Men's T-shirts")</li>
+                                        <li>Color or style</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navCart">
+                                    <i class="fas fa-shopping-cart me-2"></i> Shopping Cart
+                                </button>
+                            </h2>
+                            <div id="navCart" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                <div class="accordion-body">
+                                    <p>Access your cart from any page using the cart icon <i class="fas fa-shopping-cart"></i> in the top navigation.</p>
+                                    <p>From the cart you can:</p>
+                                    <ul>
+                                        <li>Review selected items</li>
+                                        <li>Adjust quantities</li>
+                                        <li>Proceed to checkout</li>
+                                        <li>Save items for later</li>
+                                    </ul>
+                                    <a href="/oderconformationpage.html" class="btn btn-sm btn-outline-dark">View Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navAccount">
+                                    <i class="fas fa-user me-2"></i> Account Management
+                                </button>
+                            </h2>
+                            <div id="navAccount" class="accordion-collapse collapse" data-bs-parent="#navAccordion">
+                                <div class="accordion-body">
+                                    <p>The user icon <i class="fas fa-user"></i> provides access to:</p>
+                                    <ul>
+                                        <li>Order history</li>
+                                        <li>Saved addresses</li>
+                                        <li>Wishlists</li>
+                                        <li>Account settings</li>
+                                    </ul>
+                                    <div class="alert alert-warning">
+                                        <i class="fas fa-info-circle me-2"></i> You'll need to create an account or log in to access these features.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Us Section -->
+                <div class="help-section" id="contact">
+                    <h2 class="mb-4"><i class="fas fa-envelope me-2"></i> Contact 3nity</h2>
+                    <p>We're here to help with any questions or concerns you may have.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 contact-card">
+                                <div class="card-body">
+                                    <h4><i class="fas fa-headset text-warning me-2"></i> Customer Service</h4>
+                                    <p class="text-muted">Our team is available to assist you:</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (800) 555-0199</li>
+                                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@3nity.com</li>
+                                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM-6PM EST</li>
+                                    </ul>
+                                    <a href="mailto:support@3nity.com" class="btn btn-outline-dark mt-3">
+                                        <i class="fas fa-paper-plane me-2"></i> Email Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 contact-card">
+                                <div class="card-body">
+                                    <h4><i class="fas fa-building text-warning me-2"></i> Corporate Office</h4>
+                                    <p class="text-muted">Our headquarters:</p>
+                                    <address class="mb-3">
+                                        <strong>3nity Fashion Inc.</strong><br>
+                                        123 Fashion Avenue<br>
+                                        New York, NY 10001<br>
+                                        United States
+                                    </address>
+                                    <a href="https://maps.google.com" target="_blank" class="btn btn-outline-dark">
+                                        <i class="fas fa-map-marker-alt me-2"></i> View on Map
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mt-5 mb-3">Send Us a Message</h4>
+                    <form class="mt-3">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="contactEmail" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <select class="form-select" id="contactSubject">
+                                <option>General Inquiry</option>
+                                <option>Order Question</option>
+                                <option>Returns & Exchanges</option>
+                                <option>Wholesale Inquiry</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning px-4 py-2">
+                            <i class="fas fa-paper-plane me-2"></i> Send Message
+                        </button>
+                        <button type="submit" class="btn btn-outline-secondary" id="printHelp">
+                            <i class="fas fa-paper-plane me-2"></i> Print This Page
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-dark text-white py-5" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">3nity</h5>
+                    <p>Your premier destination for fashion and accessories.</p>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Shop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="tops.html" class="text-white-50">Tops</a></li>
+                        <li class="mb-2"><a href="bottoms.html" class="text-white-50">Bottoms</a></li>
+                        <li class="mb-2"><a href="accessories.html" class="text-white-50">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-3">Help</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="help.html" class="text-white-50">Help Center</a></li>
+                        <li class="mb-2"><a href="help.html#shipping" class="text-white-50">Shipping Info</a></li>
+                        <li class="mb-2"><a href="help.html#returns" class="text-white-50">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Connect</h5>
+                    <div class="social-links mb-3">
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white-50 me-3"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <p class="small text-white-50">Subscribe to our newsletter for exclusive offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-warning" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0 small">&copy; 2023 3nity. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 small me-3">Terms of Service</a>
+                    <a href="#" class="text-white-50 small">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL without page jump
+                    if (history.pushState) {
+                        history.pushState(null, null, this.getAttribute('href'));
+                    }
+                }
+            });
+        });
+        
+        // Contact form submission
+        document.querySelector('form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond within 24 hours.');
+            this.reset();
+        });
+    </script>
+    <script src="/js/help.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/custom.js"></script>
+   
+
+</body>
+</html>
